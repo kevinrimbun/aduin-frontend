@@ -1,59 +1,52 @@
-import React from 'react';
-
+import React from "react";
+import { Link } from 'react-router-dom'
 import {
-  Home,
-  FileText,
-  ClipboardCheck,
-  History,
-  Info,
-  UserCircle,
-  PenLine,
-  Search,
-  Map,
-  MapPin
+    Home,
+    FileText,
+    ClipboardCheck,
+    History,
+    Info,
+    UserCircle,
+    PenLine,
+    Search,
+    MapPin,
+    Lightbulb,
+    Trash2,
+    Building2,
+    WavesHorizontal,
+    Road
 } from "lucide-react";
 
 // import gambar, icon
 import logo from "../../Assets/aduin-favicon.png";
 import banner from "../../Assets/banner.jpg";
 
+// import css
 import "../../Styles/LandingPage/LandingPage.css";
 
+// import complaint map
+import ComplaintMap from "../ComplaintMap/index.js";
 
 const LandingPage = () => {
-
     return (
-
         <div className="landingpage">
-
-            {/* =====================================================
-                NAVBAR
-            ====================================================== */}
+            {/* NAVBAR */}
 
             <nav className="navbar">
-
                 {/* Logo */}
                 <div className="navbar-logo">
-
                     <div className="logo-icon">
-                        <img
-                            src={logo}
-                            alt="ADUIN"
-                            className="logo"
-                        />
+                        <img src={logo} alt="ADUIN" className="logo" />
                     </div>
 
                     <div className="logo-text">
                         <h2>ADUIN</h2>
                         <p>ADUAN INFRASTRUKTUR</p>
                     </div>
-
                 </div>
-
 
                 {/* Navigation */}
                 <div className="navbar-menu">
-
                     <a href="#beranda" className="nav-link active">
                         <Home size={16} />
                         <span>Beranda</span>
@@ -84,29 +77,21 @@ const LandingPage = () => {
                         <UserCircle size={20} />
                         <span>Masuk / Daftar</span>
                     </a>
-
                 </div>
-
             </nav>
 
-
-            {/* =====================================================
-                banner SECTION
-            ====================================================== */}
+            {/* banner SECTION */}
 
             <section className="banner-section">
-
                 <div
                     className="banner-background"
                     style={{
-                        backgroundImage: `url(${banner})`
+                        backgroundImage: `url(${banner})`,
                     }}
                 >
-
                     <div className="banner-overlay"></div>
 
                     <div className="banner-content">
-
                         <h1>
                             Bersama Kita Wujudkan
                             <br />
@@ -114,137 +99,153 @@ const LandingPage = () => {
                         </h1>
 
                         <p>
-                            Laporkan permasalahan infrastruktur lingkungan
-                            di sekitar Anda
+                            Laporkan permasalahan infrastruktur lingkungan di
+                            sekitar Anda
                             <br />
                             secara mudah, cepat dan transparan.
                         </p>
-
                     </div>
-
                 </div>
 
-
-                {/* =================================================
-                    QUICK MENU
-                ================================================== */}
+                {/* QUICK MENU */}
 
                 <div className="quick-menu">
-
-
                     {/* Buat Pengaduan */}
-                    <a
-                        href="#pengaduan"
-                        className="quick-menu-item"
-                    >
-
+                    <a href="#pengaduan" className="quick-menu-item">
                         <div className="quick-icon blue">
                             <PenLine size={32} />
                         </div>
 
-                        <h3>
-                            Buat Pengaduan
-                        </h3>
+                        <h3>Buat Pengaduan</h3>
 
                         <p>
-                            Laporkan masalah infrastruktur
-                            lingkungan secara online
+                            Laporkan masalah infrastruktur lingkungan secara
+                            online
                         </p>
-
                     </a>
 
-
                     {/* Cek Status */}
-                    <a
-                        href="#status"
-                        className="quick-menu-item"
-                    >
-
+                    <a href="#status" className="quick-menu-item">
                         <div className="quick-icon green">
                             <Search size={32} />
                         </div>
 
-                        <h3>
-                            Cek Status
-                        </h3>
+                        <h3>Cek Status</h3>
 
-                        <p>
-                            Pantau perkembangan
-                            laporan Anda
-                        </p>
-
+                        <p>Pantau perkembangan laporan Anda</p>
                     </a>
 
-
                     {/* Riwayat */}
-                    <a
-                        href="#riwayat"
-                        className="quick-menu-item"
-                    >
-
+                    <a href="#riwayat" className="quick-menu-item">
                         <div className="quick-icon orange">
                             <History size={32} />
                         </div>
 
-                        <h3>
-                            Riwayat Laporan
-                        </h3>
+                        <h3>Riwayat Laporan</h3>
 
-                        <p>
-                            Lihat semua laporan
-                            yang pernah Anda buat
-                        </p>
-
+                        <p>Lihat semua laporan yang pernah Anda buat</p>
                     </a>
 
-
                     {/* Informasi */}
-                    <a
-                        href="#informasi"
-                        className="quick-menu-item"
-                    >
-
+                    <a href="#informasi" className="quick-menu-item">
                         <div className="quick-icon purple">
                             <Info size={32} />
                         </div>
 
-                        <h3>
-                            Informasi Pelayanan
-                        </h3>
+                        <h3>Informasi Pelayanan</h3>
 
-                        <p>
-                            Panduan dan informasi
-                            layanan pengaduan
-                        </p>
-
+                        <p>Panduan dan informasi layanan pengaduan</p>
                     </a>
 
-
                     {/* Peta */}
-                    <a
-                        href="#peta"
-                        className="quick-menu-item"
-                    >
-
+                    <a href="#peta" className="quick-menu-item">
                         <div className="quick-icon red">
                             <MapPin size={32} />
                         </div>
 
-                        <h3>
-                            Peta Pengaduan
-                        </h3>
+                        <h3>Peta Pengaduan</h3>
 
-                        <p>
-                            Lihat sebaran pengaduan
-                            pada peta
-                        </p>
-
+                        <p>Lihat sebaran pengaduan pada peta</p>
                     </a>
-
                 </div>
-
             </section>
 
+            <section className="complaint-section">
+                {/* JENIS PENGADUAN */}
+
+                <div className="complaint-types">
+                    <h2>Jenis Pengaduan</h2>
+
+                    <div className="complaint-list">
+                        <a href="#jalan-rusak" className="complaint-card">
+                            <div className="complaint-icon road">
+                                <Road size={30} />
+                            </div>
+
+                            <h3>Jalan Rusak</h3>
+                        </a>
+
+                        <a href="#lampu-mati" className="complaint-card">
+                            <div className="complaint-icon lamp">
+                                <Lightbulb size={30} />
+                            </div>
+
+                            <h3>
+                                Lampu
+                                <br />
+                                Penerangan Mati
+                            </h3>
+                        </a>
+
+                        <a href="#drainase" className="complaint-card">
+                            <div className="complaint-icon drainase">
+                                <WavesHorizontal size={30} />
+                            </div>
+
+                            <h3>
+                                Drainase
+                                <br />
+                                Tersumbat
+                            </h3>
+                        </a>
+
+                        <a href="#sampah" className="complaint-card">
+                            <div className="complaint-icon trash">
+                                <Trash2 size={30} />
+                            </div>
+
+                            <h3>
+                                Sampah
+                                <br />
+                                Menumpuk
+                            </h3>
+                        </a>
+
+                        <a href="#fasilitas" className="complaint-card">
+                            <div className="complaint-icon facility">
+                                <Building2 size={30} />
+                            </div>
+
+                            <h3>
+                                Fasilitas Umum
+                                <br />
+                                Rusak
+                            </h3>
+                        </a>
+                    </div>
+                </div>
+
+                {/* PETA PENGADUAN */}
+
+                <div className="complaint-map">
+                    <ComplaintMap />
+
+                    <Link to="/peta-pengaduan" className="map-button">
+                        Lihat Peta Pengaduan
+                        <span>→</span>
+                    </Link>
+                </div>
+            </section>
         </div>
     );
 };

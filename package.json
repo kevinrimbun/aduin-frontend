@@ -1,6 +1,8 @@
 {
   "dependencies": {
+    "leaflet": "^1.9.4",
     "lucide-react": "^1.48.0",
-    "react-bootstrap": "^2.10.10"
+    "react-bootstrap": "^2.10.10",
+    "react-leaflet": "^5.0.0"
   }
 }

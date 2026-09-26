@@ -373,3 +373,213 @@
 
     color: #999;
 }
+
+/* JENIS PENGADUAN + MAP */
+
+.complaint-section {
+    width: 95%;
+    margin: 170px auto 50px;
+
+    display: grid;
+    grid-template-columns: 1.7fr 1fr;
+    gap: 20px;
+
+    align-items: stretch;
+}
+
+/* JENIS PENGADUAN */
+
+.complaint-types {
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.complaint-types h2 {
+    margin: 0 0 15px 5px;
+
+    font-size: 18px;
+    font-weight: 700;
+    color: #25364a;
+}
+
+.complaint-list {
+    display: grid;
+
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 8px;
+}
+
+.complaint-card {
+    min-height: 125px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    padding: 15px 8px;
+
+    background: white;
+
+    border: 1px solid #e5e9ee;
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    color: #333;
+
+    transition: all 0.2s ease;
+}
+
+.complaint-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.complaint-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 8px;
+}
+
+/* ICON COLORS */
+
+.complaint-icon.road {
+    color: #35729b;
+}
+
+.road-icon {
+    font-size: 35px;
+    font-weight: 900;
+
+    font-family: Arial, sans-serif;
+
+    transform: scaleX(0.7);
+}
+
+.complaint-icon.lamp {
+    color: #f0b323;
+}
+
+.complaint-icon.drainase {
+    color: #2783a5;
+}
+
+.complaint-icon.trash {
+    color: #29954c;
+}
+
+.complaint-icon.facility {
+    color: #d84e55;
+}
+
+.complaint-card h3 {
+    margin: 0;
+
+    text-align: center;
+
+    font-size: 12px;
+    line-height: 1.45;
+
+    font-weight: 500;
+
+    color: #444;
+}
+
+
+/* MAP */
+
+.complaint-map {
+    position: relative;
+
+    min-height: 200px;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    background: #e5e5e5;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.complaint-leaflet-map {
+    width: 100%;
+    height: 100%;
+
+    min-height: 200px;
+
+    z-index: 1;
+}
+
+.map-button {
+    position: absolute;
+
+    z-index: 1000;
+
+    right: 15px;
+    bottom: 15px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 10px 15px;
+
+    background: #07508a;
+
+    color: white;
+
+    border-radius: 6px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+
+    transition: 0.2s;
+}
+
+.map-button:hover {
+    background: #063e68;
+}
+
+.map-button span {
+    font-size: 18px;
+    line-height: 1;
+}
+
+/* POPUP LEAFLET */
+.complaint-popup {
+    min-width: 180px;
+}
+
+.complaint-popup h3 {
+    margin: 0 0 10px;
+
+    color: #07508a;
+
+    font-size: 15px;
+}
+
+.complaint-popup p {
+    margin: 5px 0;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    color: #555;
+}
